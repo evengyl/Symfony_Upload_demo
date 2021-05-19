@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    {% for user in allUser %}
+        <div class="card" style="width: 18rem;">
+            <img src="/assets/images/user/{{user.imageName}}" class="card-img-top" style="height:150px; width:150px; alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{user.name}}</h5>
+                <h5 class="card-title">{{user.login}}</h5>
+                <h5 class="card-title">{{user.email}}</h5>
+                <a class='btn btn-success' href="{{ path('user_update', {id : user.id}) }}">Modifier le user</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Update un user{% endblock %}
+
+{% block body %}
+{{ form_start(myForm) }}
+    {{ form_widget(myForm) }}
+    <input class="btn btn-success" type="submit" value="Modifier"> 
+{{ form_end(myForm) }}
+
+{% endblock %}
